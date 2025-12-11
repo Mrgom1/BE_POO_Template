@@ -115,3 +115,4 @@ void Application::run(void)
   delay(1000);
   lcd.clear();
 }
+
