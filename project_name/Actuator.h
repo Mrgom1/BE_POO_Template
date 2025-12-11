@@ -1,37 +1,37 @@
 /*********************************************************************
- * @file  Apllication.h
+ * @file  Scenario.h
  * @author DEVALET Hugo, BREIL Nicolas
  * @brief Fichier header de l'application
  *********************************************************************/
-#ifndef APPLICATION_H_
-#define APPLICATION_H_
-
+#ifndef ACTUATOR_H_
+#define ACTUATOR_H_
 /**
   * @class Application
   * @brief Classe Application 
 */    
-class Application
+class Actuator:public Scenario
 {
   public :
     /**
      * @fn Application();
      * @brief Constructeur par defaut
     */    
-    Application();
+    Actuator();
     /**
      * @fn Application();
      * @brief Destructeur
     */    
-    virtual ~Application();    
+    ~Actuator();    
     /**
      * @fn void init(void)
      * @brief Fonction d'initialisation de l'application
     */
-    virtual void init(void);
+    void init(void);
     /**
      * @fn void run(void)
      * @brief Fonction de lancement de l'application
     */
-    void run(void);
 };
+
 #endif
+

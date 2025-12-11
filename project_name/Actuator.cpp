@@ -3,37 +3,36 @@
  * @author <mettre l'adresse mail ou nom prenom>
  * @brief Fichier source de l'application
  *********************************************************************/
-#include "Scenario.h"
-#include "Application.h"
+#include "Actuator.h"
+#include <ESP8266WiFi.h>
+#include <WiFiClientSecure.h>
+#include <Wire.h>
+#include <rgb_lcd.h>
+#include "Senario.h"
 
-Scenario::Scenario()
+Actuator::Actuator()
 {
   // Code
   ; 
 }
   
-Scenario::~Scenario()
+Motor::~Motor()
 {
   // Code
   ;
 }
 
-Scenario::wake_up()
+Motor::init()
 {
     ;
 }
 
-Scenario::day_time()
+Motor::open_door()
 {
     ;
 }
 
-Scenario::night_time()
-{
-    ;
-}
-
-Scenario::go_to_bed()
+Motor::close_door()
 {
     ;
 }
