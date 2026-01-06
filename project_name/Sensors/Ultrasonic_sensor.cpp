@@ -12,7 +12,7 @@ UltrasonicSensor::UltrasonicSensor(uint8_t pin, const char* name)
 UltrasonicSensor::~UltrasonicSensor(){
 }
 
-float UltrasonicSensor::read(){
+float UltrasonicSensor::get_valeur(){
     long distance = ultrasonic.MeasureInCentimeters();
 
     if (distance <= 0)

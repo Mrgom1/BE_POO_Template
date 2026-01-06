@@ -11,5 +11,5 @@ public:
     TouchSensor(uint8_t pin, const char* name);
     ~TouchSensor();
 
-    float read() override;
+    float get_valeur() override;
 };

@@ -13,7 +13,7 @@ TouchSensor::TouchSensor(uint8_t pin, const char* name)
 TouchSensor::~TouchSensor(){
 }
 
-float TouchSensor::read(){
+float TouchSensor::get_valeur(){
     int value = digitalRead(pin);
     return (value==HIGH);
 }

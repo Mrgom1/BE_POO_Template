@@ -17,5 +17,5 @@ public:
     UltrasonicSensor(uint8_t pin, const char* name);
     ~UltrasonicSensor();
 
-    float read() override;
+    float get_valeur() override;
 };
