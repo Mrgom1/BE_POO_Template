@@ -26,7 +26,7 @@ class Actuator:public Scenario
      * @fn void init(void)
      * @brief Fonction d'initialisation de l'application
     */
-    void init(void);
+    void Activate(void);
     /**
      * @fn void run(void)
      * @brief Fonction de lancement de l'application

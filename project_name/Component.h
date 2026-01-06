@@ -3,14 +3,14 @@
  * @author <mettre l'adresse mail ou nom prenom>
  * @brief Fichier source de l'application
  *********************************************************************/
-#include "Actuator.h"
+#include "Motor.h"
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <Wire.h>
 #include <rgb_lcd.h>
-#include "Senario.h"
+#include "Acutator.h"
 
-Actuator::Actuator()
+Component::Component()
 {
   // Code
   ; 
