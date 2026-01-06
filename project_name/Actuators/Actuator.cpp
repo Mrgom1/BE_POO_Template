@@ -4,23 +4,8 @@
  * @brief Fichier source de l'application
  *********************************************************************/
 #include "Actuator.h"
-#include "Scenario.h"
 
-Actuator::Actuator()
-{
-  // Code
-  ; 
-}
-  
-Actuator::~Actuator()
-{
-  // Code
-  ;
-}
-
-Actuator::void Activate()
-{
-    ;
-}
+Actuator::Actuator(int pin, string name) : Component(pin, name){}
+Actuator::~Actuator(){}
 
 

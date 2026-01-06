@@ -17,7 +17,7 @@ public:
 
     // Destructeur virtuel
     virtual ~Sensor();
-    virtual float getValeur() = 0;
+    virtual float get_valeur() = 0;
 };
 
 #endif

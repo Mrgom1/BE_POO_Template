@@ -5,32 +5,29 @@
  *********************************************************************/
 #ifndef ACTUATOR_H_
 #define ACTUATOR_H_
+
+#include "../Component.h"
+using namespace std;
+
 /**
   * @class Application
   * @brief Classe Application 
 */    
-class Actuator:public Scenario
+class Actuator:public Component
 {
   public :
     /**
      * @fn Application();
      * @brief Constructeur par defaut
     */    
-    Actuator();
+    Actuator(int pin, string name);
     /**
      * @fn Application();
      * @brief Destructeur
     */    
-    ~Actuator();    
-    /**
-     * @fn void init(void)
-     * @brief Fonction d'initialisation de l'application
-    */
-    void Activate(void);
-    /**
-     * @fn void run(void)
-     * @brief Fonction de lancement de l'application
-    */
+    virtual ~Actuator(); 
+    virtual void set_value(float value )  = 0;
+
 };
 
 #endif
