@@ -3,36 +3,38 @@
  * @author <mettre l'adresse mail ou nom prenom>
  * @brief Fichier source de l'application
  *********************************************************************/
-#include "Motor.h"
-#include <ESP8266WiFi.h>
-#include <WiFiClientSecure.h>
-#include <Wire.h>
-#include <rgb_lcd.h>
-#include "Acutator.h"
+#ifndef COMPONENT_H
+#define COMPONENT_H
 
-Component::Component()
-{
-  // Code
-  ; 
-}
-  
-Motor::~Motor()
-{
-  // Code
-  ;
-}
+#include <string>
+using namespace std;
+// L'include Arduino.h est nécessaire pour les types spécifiques (uint8_t) 
+// et les constantes si vous en utilisez ici, mais pour int et string c'est optionnel.
+// #include <Arduino.h> 
 
-Motor::init()
-{
-    ;
-}
+class Component {
+protected:
+    // "protected" permet aux classes filles (Sensor, Actuator) d'accéder directement à ces variables
+    int pin;            // Le numéro de la broche sur l'ESP8266
+    std::string name;    // Un nom pour identifier le composant (ex: "Bouton_Rouge")
 
-Motor::open_door()
-{
-    ;
-}
+public:
+    // Constructeur
+    Component(int pin, string name);
 
-Motor::close_door()
-{
-    ;
-}
+    // Destructeur Virtuel
+    // OBLIGATOIRE quand on utilise le polymorphisme (std::vector<Component*>)
+    // Sinon le destructeur des classes filles ne sera pas appelé (fuite de mémoire).
+    virtual ~Component();
+
+    // Méthode Virtuelle Pure
+    // Le "= 0" rend la classe Abstraite. 
+    // Chaque enfant (Led, Bouton, LCD) DEVRA fournir sa propre version de init().
+    virtual void init() = 0; 
+
+    // Getters (Accesseurs) pour lire les infos protégées
+    int get_pin() const;
+    string get_name() const;
+};
+
+#endif

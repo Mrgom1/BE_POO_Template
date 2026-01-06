@@ -3,24 +3,12 @@
  * @author <mettre l'adresse mail ou nom prenom>
  * @brief Fichier source de l'application
  *********************************************************************/
-#include "Actuator.h"
-#include "Scenario.h"
+#include "../Component.h"
+#include "Sensor.h"
+#include <string>
+#include <iostream>
+using namespace std;
 
-Actuator::Actuator()
-{
-  // Code
-  ; 
-}
-  
-Actuator::~Actuator()
-{
-  // Code
-  ;
-}
-
-Actuator::void Activate()
-{
-    ;
-}
-
+Sensor::Sensor(int pin, string name) : Component(pin,name){}
+Sensor::~Sensor(){}
 

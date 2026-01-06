@@ -3,36 +3,18 @@
  * @author <mettre l'adresse mail ou nom prenom>
  * @brief Fichier source de l'application
  *********************************************************************/
-#include "Motor.h"
-#include <ESP8266WiFi.h>
-#include <WiFiClientSecure.h>
-#include <Wire.h>
-#include <rgb_lcd.h>
-#include "Acutator.h"
+#include "Component.h"
 
-Motor::Motor()
-{
-  // Code
-  ; 
-}
-  
-Motor::~Motor()
-{
-  // Code
-  ;
-}
+class Component{
+  protected:
+    int pin;
+    string name;
+public:
+    Component(int p, string n) : pin(p), name(n) {}
+    virtual void init() = 0; // Méthode pure
+    virtual ~Component() {}  // Destructeur virtuel essentiel
 
-Motor::init()
-{
-    ;
-}
+    string get_name (){return(name);}
+    int get_pin(){return pin;}
 
-Motor::open_door()
-{
-    ;
-}
-
-Motor::close_door()
-{
-    ;
-}
+};
