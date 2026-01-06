@@ -6,16 +6,10 @@
 #include <Ultrasonic.h>
 #include "Sensor.h"
 
-
-
-class UltrasonicSensor : public Sensor{
-
-private:
-    Ultrasonic ultrasonic;
-
+class TouchSensor : public Sensor{
 public:
-    UltrasonicSensor(uint8_t pin, const char* name);
-    ~UltrasonicSensor();
+    TouchSensor(uint8_t pin, const char* name);
+    ~TouchSensor();
 
     float read() override;
 };
