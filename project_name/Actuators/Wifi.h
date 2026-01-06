@@ -24,37 +24,7 @@ public:
     /**
      * @brief Initialise et connecte le WiFi
      */
-    void init();
 
-    /**
-     * @brief Tente de (re)connecter si déconnecté
-     */
-    void ensureConnected();
-
-    /**
-     * @brief Déconnecte proprement
-     */
-    void disconnect();
-
-    /**
-     * @brief Retourne l'adresse IP au format String
-     */
-    String getIP();
-
-    /**
-     * @brief Vérifie si le WiFi est connecté
-     */
-    bool isConnected();
-
-    /**
-     * @brief Envoie des données via HTTP GET (simple)
-     */
-    bool httpGET(const char* url);
-
-    /**
-     * @brief Envoie des données via HTTP POST (simple)
-     */
-    bool httpPOST(const char* url, const String& data);
 };
 
 #endif
